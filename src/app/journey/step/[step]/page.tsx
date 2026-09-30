@@ -121,11 +121,11 @@ function IntroStepBody({
           課程說明 <span className="text-base font-normal text-muted">Course Notes</span>
         </h2>
         <p className="mt-3 text-muted">
-          本課程將帶領你從注射前的家長溝通、幼兒安撫，到 360 度注射情境操作，最後完成注射後衛教。請依序完成每個步驟，以獲得最完整的學習體驗。
+          本課程將帶領你從注射前的家長溝通、學齡期兒童安撫，到 360 度注射情境操作，最後完成注射後衛教。請依序完成每個步驟，以獲得最完整的學習體驗。
         </p>
         <p className="mt-2 text-sm text-muted">
           This course guides you through pre-injection caregiver communication,
-          child calming, a 360° injection scenario, and post-injection health
+          school-age child calming, a 360° injection scenario, and post-injection health
           education. Complete each step in order for the best learning experience.
         </p>
         <div className="mt-6">

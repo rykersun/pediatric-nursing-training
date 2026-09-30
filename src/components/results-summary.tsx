@@ -116,7 +116,7 @@ export function ResultsSummary() {
 
 function getFeedbackZh(result: ReturnType<typeof buildSessionResult>): string {
   if (result.completedSteps === 0) return "尚未完成任何步驟。";
-  if (result.allPassed) return "表現優秀！你已掌握小兒注射的核心溝通與技術流程。";
+  if (result.allPassed) return "表現優秀！你已掌握兒童注射的核心溝通與技術流程。";
   const lowSteps = result.stepResults
     .filter((r) => !r.passed)
     .map((r) => JOURNEY_STEPS.find((s) => s.step === r.step)?.title.zh)

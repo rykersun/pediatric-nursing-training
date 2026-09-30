@@ -13,7 +13,7 @@ export default function Home() {
           <PageHeader
             eyebrow="Nursing Education"
             title={{
-              zh: "小兒注射護理訓練",
+              zh: "兒童注射護理訓練",
               en: "Pediatric Injection Training",
             }}
             description={{

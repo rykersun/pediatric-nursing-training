@@ -9,7 +9,7 @@ export function SiteHeader() {
             P
           </span>
           <span className="hidden sm:inline">
-            小兒注射護理訓練
+            兒童注射護理訓練
             <span className="ml-2 text-sm font-normal text-muted">
               Pediatric Injection Training
             </span>

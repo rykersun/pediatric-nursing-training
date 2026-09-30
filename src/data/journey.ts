@@ -39,7 +39,7 @@ export const JOURNEY_STEPS: readonly JourneyStepConfig[] = [
     },
     learningObjectives: [
       {
-        zh: "說明小兒注射前的準備與安全查核要點",
+        zh: "說明學齡期兒童注射前的準備與安全查核要點",
         en: "Describe pre-injection preparation and safety checks for pediatric patients.",
       },
       {
@@ -109,10 +109,10 @@ export const JOURNEY_STEPS: readonly JourneyStepConfig[] = [
     kind: "vh",
     route: "/journey/step/3",
     title: {
-      zh: "安撫幼兒並進行溝通",
+      zh: "安撫學齡期兒童並進行溝通",
       en: "Calm and Communicate with the Child",
     },
-    shortTitle: { zh: "幼兒", en: "Child" },
+    shortTitle: { zh: "兒童", en: "Child" },
     description: {
       zh: "學習以適齡語言與安撫技巧，降低病童焦慮並取得合作。",
       en: "Learn age-appropriate language and calming techniques to reduce anxiety and gain cooperation.",
@@ -139,7 +139,7 @@ export const JOURNEY_STEPS: readonly JourneyStepConfig[] = [
         role: { zh: "6 歲病童", en: "6-year-old pediatric patient" },
       },
       scenarioNote: {
-        zh: "以溫和方式向幼兒說明即將進行的注射。",
+        zh: "以溫和方式向學齡期兒童說明即將進行的注射。",
         en: "Gently explain the upcoming injection to the child.",
       },
     },

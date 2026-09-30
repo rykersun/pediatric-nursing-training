@@ -1,6 +1,6 @@
-# 小兒注射護理訓練 Pediatric Injection Training
+# 兒童注射護理訓練 Pediatric Injection Training
 
-護理學生專用的小兒注射溝通與技術訓練平台。
+護理學生專用的兒童注射溝通與技術訓練平台。
 
 A pediatric injection training platform for nursing students, built with Next.js, TypeScript, and Tailwind CSS.
 
@@ -8,7 +8,7 @@ A pediatric injection training platform for nursing students, built with Next.js
 
 1. 課程介紹 Course Introduction
 2. 虛擬人：注射前與母親溝通 Virtual Human: Mother Before Injection
-3. 虛擬人：安撫與溝通幼兒 Virtual Human: Calm the Child
+3. 虛擬人：安撫與溝通學齡期兒童 Virtual Human: Calm the School-Age Child
 4. 360 度互動注射情境 360° Interactive Injection Scenario
 5. 虛擬人：注射後與母親溝通 Virtual Human: Mother After Injection
 6. 成果與回饋 Results and Feedback

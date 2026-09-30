@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "小兒注射護理訓練 Pediatric Injection Training",
-    template: "%s | 小兒注射護理訓練",
+    default: "兒童注射護理訓練 Pediatric Injection Training",
+    template: "%s | 兒童注射護理訓練",
   },
   description:
-    "護理學生專用的小兒注射溝通與技術訓練平台。A pediatric injection training platform for nursing students.",
+    "護理學生專用的兒童注射溝通與技術訓練平台。A pediatric injection training platform for nursing students.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

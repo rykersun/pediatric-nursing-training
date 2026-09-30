@@ -10,7 +10,8 @@ import { Button } from "@/components/ui/button";
 export default function ResultsPage() {
   const { progress } = useJourneyProgress();
   const completed = new Set(getCompletedSteps(progress));
-  const missing = JOURNEY_STEPS.filter((s) => !completed.has(s.step));
+  const learningSteps = JOURNEY_STEPS.filter((s) => s.kind !== "results");
+  const missing = learningSteps.filter((s) => !completed.has(s.step));
   const isComplete = missing.length === 0;
 
   return (

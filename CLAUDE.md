@@ -49,6 +49,14 @@ Use placeholders and mock data first.
 - Do not make the interface childish
 - Do not treat this as a patient-facing application
 
+## Terminology
+
+- Use 「兒童」 instead of 「小兒」 in user-facing UI.
+- The pediatric patient population is specifically 「學齡期兒童」.
+- Do not use 「幼兒」、「幼童」 or 「嬰幼兒」 to describe the scenario population.
+- Use 「兒童」 for general UI wording and 「學齡期兒童」 when the age group needs to be explicit.
+- The target learner is 「護理學生」.
+
 ## Tooling
 
 Use Context7 MCP for current:

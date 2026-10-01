@@ -70,6 +70,14 @@ Use OpenDesign MCP when working on UI/visual design.
 
 Use GitHub MCP for repository, issues, pull requests, and project tracking.
 
+## Deployment
+
+- Vercel team scope must be `cguim-83` (orgId `team_Tzz9wV81DqaJzeg0ImkVQpNC`).
+- All `vercel` commands must include `--scope cguim-83`; omitting it fails with "Not authorized".
+- Preview deploy: `vercel deploy --scope cguim-83`
+- Production deploy: `vercel deploy --prod --scope cguim-83`
+- Production URL: https://pediatric-nursing-training.vercel.app
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know

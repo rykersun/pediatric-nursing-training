@@ -66,10 +66,6 @@ Use Context7 MCP for current:
 - library APIs
 - version-specific implementation details
 
-Use OpenDesign MCP when working on UI/visual design.
-
-Use GitHub MCP for repository, issues, pull requests, and project tracking.
-
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know

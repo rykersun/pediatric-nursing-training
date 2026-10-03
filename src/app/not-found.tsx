@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
@@ -16,18 +16,12 @@ export default function NotFound() {
         </span>
       </p>
       <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-        <Link
-          href="/"
-          className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-6 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-        >
-          回首頁 <span className="ml-2 text-sm font-normal">Home</span>
-        </Link>
-        <Link
-          href="/journey"
-          className="inline-flex h-12 items-center justify-center rounded-md border border-border bg-white px-6 font-medium text-foreground transition-colors hover:bg-muted-background"
-        >
-          課程總覽 <span className="ml-2 text-sm font-normal">Overview</span>
-        </Link>
+        <Button href="/" size="lg">
+          回首頁 <span className="text-sm font-normal">Home</span>
+        </Button>
+        <Button href="/journey" variant="secondary" size="lg">
+          課程總覽 <span className="text-sm font-normal">Overview</span>
+        </Button>
       </div>
     </div>
   );

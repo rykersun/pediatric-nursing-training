@@ -11,6 +11,9 @@ export function ProgressTracker() {
   const pathname = usePathname();
   const { progress } = useJourneyProgress();
   const statuses = getStepStatuses(progress);
+  const completedCount = JOURNEY_STEPS.filter(
+    (s) => statuses[s.step] === "completed",
+  ).length;
 
   const currentStepNumber = getCurrentStepNumber(pathname);
 
@@ -30,13 +33,16 @@ export function ProgressTracker() {
                 key={step.step}
                 href={step.route}
                 className={[
-                  "group flex flex-1 flex-col items-center gap-2 rounded-md px-2 py-3 text-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                  "group flex flex-1 flex-col items-center gap-2 rounded-md px-2 py-3 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                   status === "locked" ? "pointer-events-none opacity-60" : "",
-                  isCurrent ? "bg-primary-subtle" : "",
+                  isCurrent
+                    ? "bg-primary-subtle shadow-[inset_0_-2px_0_0_var(--primary)]"
+                    : "",
                   !isCurrent && status !== "locked" ? "hover:bg-muted-background" : "",
                 ].join(" ")}
                 aria-current={isCurrent ? "step" : undefined}
                 aria-disabled={status === "locked"}
+                tabIndex={status === "locked" ? -1 : undefined}
               >
                 <StepIndicator status={status} step={step.step} />
                 <span
@@ -53,23 +59,37 @@ export function ProgressTracker() {
         </div>
 
         {/* Mobile compact view */}
-        <div className="flex items-center justify-between md:hidden">
-          <span className="text-sm font-medium text-foreground">
-            {currentStepNumber ? (
-              <>
-                步驟 {currentStepNumber} / {JOURNEY_STEPS.length}{" "}
-                <span className="text-xs text-muted">
-                  Step {currentStepNumber} of {JOURNEY_STEPS.length}
-                </span>
-              </>
-            ) : (
-              <>課程總覽 <span className="text-xs text-muted">Overview</span></>
-            )}
-          </span>
-          <span className="text-sm text-muted">
-            {JOURNEY_STEPS.filter((s) => statuses[s.step] === "completed").length}{" "}
-            / {JOURNEY_STEPS.length} 完成
-          </span>
+        <div className="md:hidden">
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium text-foreground">
+              {currentStepNumber ? (
+                <>
+                  步驟 {currentStepNumber} / {JOURNEY_STEPS.length}{" "}
+                  <span className="text-xs text-muted">
+                    Step {currentStepNumber} of {JOURNEY_STEPS.length}
+                  </span>
+                </>
+              ) : (
+                <>課程總覽 <span className="text-xs text-muted">Overview</span></>
+              )}
+            </span>
+            <span className="text-sm text-muted">
+              {completedCount} / {JOURNEY_STEPS.length} 完成
+            </span>
+          </div>
+          <div
+            className="mt-2.5 h-1 w-full overflow-hidden rounded-full bg-muted-background"
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={JOURNEY_STEPS.length}
+            aria-valuenow={completedCount}
+            aria-label="課程完成進度 Course completion"
+          >
+            <div
+              className="h-full rounded-full bg-primary transition-[width] duration-300 ease-out"
+              style={{ width: `${(completedCount / JOURNEY_STEPS.length) * 100}%` }}
+            />
+          </div>
         </div>
       </div>
     </nav>

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { VirtiModuleType } from "@/data/journey";
 import { BilingualText } from "@/components/bilingual-text";
 import type { LocalizedText } from "@/data/journey";
+import { Button } from "@/components/ui/button";
 import { MarkCompleteButton } from "@/components/mark-complete-button";
 
 interface PlaceholderFrameProps {
@@ -85,13 +86,9 @@ export function PlaceholderFrame({
             <p className="mx-auto mt-4 max-w-md text-sm text-muted">
               <BilingualText text={scenarioNote} />
             </p>
-            <button
-              type="button"
-              onClick={() => setIsPlaying(true)}
-              className="mt-6 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            >
+            <Button onClick={() => setIsPlaying(true)} className="mt-6">
               開始模擬 <span className="font-normal">Start Simulation</span>
-            </button>
+            </Button>
           </>
         ) : (
           <>
@@ -101,7 +98,7 @@ export function PlaceholderFrame({
             </div>
             <div className="h-2 w-full max-w-md overflow-hidden rounded-full bg-border">
               <div
-                className="h-full bg-primary transition-all duration-100 ease-linear"
+                className="h-full bg-primary transition-[width] duration-100 ease-linear"
                 style={{ width: `${progress}%` }}
               />
             </div>

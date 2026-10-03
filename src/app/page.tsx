@@ -24,7 +24,7 @@ export default function Home() {
           />
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <StartCourseButton size="lg" />
-            <Button href="/journey" variant="secondary" size="lg">
+            <Button href="/journey" variant="secondary">
               瀏覽課程總覽 <span className="text-sm font-normal">Browse Overview</span>
             </Button>
           </div>
@@ -48,7 +48,7 @@ export default function Home() {
             {JOURNEY_STEPS.map((step) => (
               <li
                 key={step.step}
-                className="rounded-xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="rounded-xl border border-border bg-white p-6 shadow-sm transition-[border-color,transform] duration-200 ease-out hover:border-primary/30 active:scale-[0.99]"
               >
                 <div className="mb-4 flex items-center justify-between">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary-subtle text-sm font-semibold text-primary">

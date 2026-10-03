@@ -15,8 +15,10 @@ export function JourneyStepCard({ step, status }: JourneyStepCardProps) {
 
   return (
     <div
-      className={`relative rounded-xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md ${
-        status === "locked" ? "opacity-70" : ""
+      className={`relative rounded-xl border bg-white p-6 shadow-sm transition-[border-color,transform] duration-200 ease-out ${
+        status === "locked"
+          ? "opacity-70"
+          : "hover:border-primary/30 active:scale-[0.99]"
       }`}
     >
       <div className="mb-4 flex items-start justify-between">
@@ -46,6 +48,7 @@ export function JourneyStepCard({ step, status }: JourneyStepCardProps) {
               : "text-primary hover:underline"
           }`}
           aria-disabled={status === "locked"}
+          tabIndex={status === "locked" ? -1 : undefined}
         >
           {statusConfig.actionLabel}
           {status === "locked" && (

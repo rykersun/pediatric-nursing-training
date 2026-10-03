@@ -20,7 +20,7 @@ export function BilingualText({
       <span className={`block ${className}`}>
         <span className={`block ${zhClassName}`}>{text.zh}</span>
         <span
-          className={`block text-sm font-normal text-muted ${enClassName}`}
+          className={`mt-1 block text-base font-normal leading-snug text-muted ${enClassName}`}
         >
           {text.en}
         </span>

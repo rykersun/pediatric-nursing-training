@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 interface ErrorPageProps {
   error: Error & { digest?: string };
@@ -28,19 +28,12 @@ export default function Error({ error, reset }: ErrorPageProps) {
         </span>
       </p>
       <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-        <button
-          type="button"
-          onClick={reset}
-          className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-6 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-        >
-          重試 <span className="ml-2 text-sm font-normal">Try Again</span>
-        </button>
-        <Link
-          href="/journey"
-          className="inline-flex h-12 items-center justify-center rounded-md border border-border bg-white px-6 font-medium text-foreground transition-colors hover:bg-muted-background"
-        >
-          課程總覽 <span className="ml-2 text-sm font-normal">Overview</span>
-        </Link>
+        <Button onClick={reset} size="lg">
+          重試 <span className="text-sm font-normal">Try Again</span>
+        </Button>
+        <Button href="/journey" variant="secondary" size="lg">
+          課程總覽 <span className="text-sm font-normal">Overview</span>
+        </Button>
       </div>
     </div>
   );

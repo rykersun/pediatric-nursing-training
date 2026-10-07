@@ -66,14 +66,6 @@ Use Context7 MCP for current:
 - library APIs
 - version-specific implementation details
 
-## Vercel Deployment
-
-- Project is linked in `.vercel/project.json` under team `cguim-83` (orgId `team_Tzz9wV81DqaJzeg0ImkVQpNC`).
-- **Always pass an explicit scope when deploying**: `vercel --scope cguim-83` (or `--prod --scope cguim-83`).
-  - Without `--scope`, `vercel deploy` may fail with `Not authorized`, even though the CLI is logged in and the project is linked. This happens because the CLI resolves scope from the linked project inconsistently; passing the team slug explicitly avoids it.
-- The linked project's production URL is `https://pediatric-nursing-training.vercel.app`.
-- Use preview deployments (`vercel --scope cguim-83`) for testing; promote to production only after explicit confirmation.
-
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
